@@ -1,0 +1,6 @@
+# to find duplicate rows in a table.
+
+select *, count(empid)
+from emp
+group by emp1id
+having count(empid)>1;

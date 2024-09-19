@@ -4,3 +4,6 @@ select *, count(empid)
 from emp
 group by emp1id
 having count(empid)>1;
+
+select *, rownumber() over (partition by id order by id) as rn 
+from emp

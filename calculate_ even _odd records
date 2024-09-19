@@ -1,1 +1,8 @@
 
+#to calculte the even and odd records from a table
+even
+select * from empl
+where mod(empid,2)=0;
+odd
+select * from empl
+where mod(empid,2)=1;

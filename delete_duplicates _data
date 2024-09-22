@@ -1,0 +1,25 @@
+#how do you delete duplicates  data from sql table.
+car table
+model_id model_name color brand
+
+Solution-1
+delete from cars
+where model_id not in (select min(model_id)
+                      from cars
+                      group by model_name, brand);
+
+
+select model_id, model_name, color, brand
+from car
+row_number over (partioned by mode_id parione_by 1 ) as row_num
+delete row_num<1
+
+
+
+
+select model_id, model_name, color, brand
+from car
+row_number over (partioned by mode_id parione_by 1 ) as row_num
+delete row_num<1
+
+

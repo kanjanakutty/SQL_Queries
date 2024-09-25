@@ -4,3 +4,10 @@ select top 2 *
 from employee
 order by salary desc
 limit 2;
+
+
+select *,
+row_number() over(partition by dept_id order by salary dec) as rn
+dense_rank() over(partition by dept_id order by salary desc) as rn_dense
+from employee 
+

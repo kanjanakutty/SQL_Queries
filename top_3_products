@@ -1,0 +1,6 @@
+select * from employee 
+
+select top 2 * 
+from employee
+order by salary desc
+limit 2;

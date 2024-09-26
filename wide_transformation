@@ -1,0 +1,6 @@
+SELECT
+    SUM(CASE WHEN col1 = 'apple' THEN 1 ELSE 0 END) AS apple,
+    SUM(CASE WHEN col1 = 'orange' THEN 1 ELSE 0 END) AS orange,
+    SUM(CASE WHEN col1 = 'grapes' THEN 1 ELSE 0 END) AS grapes
+FROM
+    your_table;

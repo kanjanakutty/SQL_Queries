@@ -1,2 +1,4 @@
 select *, 
-rownum() over()
+rownum() over(partiontion by employee id order by employeeid desc) as rn
+from employee
+where rn==2

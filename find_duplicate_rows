@@ -1,4 +1,5 @@
 # to find duplicate rows in a table.
+#Write a SQL Query to fetch all the duplicate records in a table.
 
 select *, count(empid)
 from emp
@@ -7,3 +8,12 @@ having count(empid)>1;
 
 select *, rownumber() over (partition by id order by id) as rn 
 from emp
+
+
+select user_id, user_name, email
+from (
+select *,
+row_number() over (partition by user_name order by user_id) as rn
+from users u
+order by user_id) x
+where x.rn <> 1;
